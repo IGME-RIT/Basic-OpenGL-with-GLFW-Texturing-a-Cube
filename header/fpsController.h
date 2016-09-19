@@ -36,7 +36,7 @@ public:
     FPSController();
     ~FPSController();
     Transform3D GetTransform();
-    void Update(GLFWwindow* window, glm::vec2 viewportDimensions, glm::vec2 mousePosition);
+    void Update(GLFWwindow* window, glm::vec2 viewportDimensions, glm::vec2 mousePosition, float deltaTime);
 
 
 

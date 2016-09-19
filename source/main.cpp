@@ -242,14 +242,18 @@ int main(int argc, char **argv)
             break;
         }
 
+        // Calculate delta time.
+        float dt = glfwGetTime();
+        // Reset the timer.
+        glfwSetTime(0);
         
 
         // Update the player controller
-        controller.Update(window, viewportDimensions, mousePosition);
+        controller.Update(window, viewportDimensions, mousePosition, dt);
 
 
         // rotate square
-        transform.RotateY(.0002f);
+        transform.RotateY(1.0f * dt);
 
 
 
